@@ -1,0 +1,479 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+.container{
+    display: grid;
+    grid-template-areas: 
+    'esquerdo main';
+    grid-template-columns: 245px 1fr;
+    grid-template-rows: 1fr;
+    height: 100vh;
+}
+.cima{
+    display: none;
+}
+.esquerdo {
+    grid-area: esquerdo;
+    border-right: 1px solid #c7c7c7;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.logo{
+    width: 100%;
+    height: 92px;
+    display: flex;
+    align-items: center;
+    margin: auto;
+    padding-left: 35px;
+}
+.imgLogo{
+    width: 102px;
+}
+.linksEsquerdo .linkInstagram{
+    display: none;
+}
+.linksEsquerdo {
+    flex: 1; /* ocupa o restante da altura após .logo */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow-y: hidden;
+    padding: 10px 0;
+    align-items: center;
+}
+
+/* Lista de links menos o último */
+.linksEsquerdo .linkEsq:not(.ultimoLinkEsq) {
+    margin-bottom: 4px;
+}
+.linkEsq{
+    width: 90%;
+    height: 45px;
+    border-radius: 7px;
+    margin-bottom: 4px;
+    display: flex;
+    align-items: center;
+    padding-left: 23px;
+    gap: 12px;
+}
+.linkEsq img{
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+}
+.ultimoLinkEsq {
+    margin-top: auto;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    padding-left: 23px;
+    gap: 12px;
+    border-radius: 7px;
+}
+
+.linkEsq:hover{
+    background-color: #f2f2f2;
+}
+
+main{
+    grid-area: main;
+
+    display: flex;
+    justify-content: center;
+    overflow-y: auto;
+}
+.content{
+    width: 100%;
+    max-width: 1102px;
+    display: grid;
+    grid-template-areas: 
+    'header direito'
+    'section direito';
+    grid-template-columns: 1.75fr 1fr;
+    grid-template-rows: 120px 1fr;
+}
+
+header{
+
+    grid-area: header;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    padding-left: 6px;
+    padding-right: 6px;
+    overflow-x: auto;
+    
+}
+header::-webkit-scrollbar {
+  height: 6px; 
+  background: transparent;
+}
+header:hover::-webkit-scrollbar-thumb {
+  background-color: #c7c7c7;
+  border-radius: 10px
+}
+.storie {
+  width: 72px;
+  height: 90px;
+  background-color: white;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: sans-serif;
+  font-size: 12px;
+}
+
+.imageStorieBackground {
+  width: 64px;
+  height: 64px;
+  background: conic-gradient(
+    #feda75, #fa7e1e, #d62976, #962fbf, #4f5bd5, #feda75
+  );
+  border-radius: 50%;
+  padding: 3px; /* define a espessura do degradê */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.seuStoryBackground{
+    background: #c7c7c7;
+}
+.imageStorieBackground img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: 2px solid white;
+  object-fit: cover;
+}
+
+.direito{
+    grid-area: direito;
+    padding-left: 64px;
+    padding-top: 25px;
+
+}
+.perfilDireito{
+    width: 287px;
+    height: 44px;
+    display: flex;
+    padding-bottom: 3px;
+}
+.ImagePerfilDireitoContainer{
+    width: 56px;
+    display: flex;
+    align-items: center;
+}
+.ImagePerfilDireitoContainer img{
+    width: 100%;
+    border-radius: 50%;
+    border: 1px solid white;
+
+}
+.nomeDireito{
+    width: 100%;
+    padding-left: 10px;
+}
+.mudarDireito{
+    width: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+}
+.conteudoInferiorDireito{
+    margin-top: 40px;
+}
+.conteudoInferiorDireito a{
+    color: #c7c7c7;
+    text-decoration: none;
+    font-size: 12px;
+}
+.conteudoInferiorDireito p{
+    color: #c7c7c7;
+    font-size: 12px;
+}
+
+section{
+    grid-area: section;
+    
+}
+.post{
+    width: 470px;
+    height: auto;
+    margin: auto;
+    border-bottom: 1px solid gray;
+    margin-bottom: 4px
+}
+.superiorPost{
+    height: 56px;
+    display: grid;
+    grid-template-areas: 'imgPostSuperior nomePost opcoesPost';
+    grid-template-columns: 46px 1fr 42px;
+    grid-template-rows: 1fr;
+}
+.superiorPost img, p, svg:hover{
+    cursor: pointer;
+}
+.imgPostSuperior{
+    grid-area: imgPostSuperior;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+}
+.imgPostSuperior img{
+    width: 80%;
+    border-radius: 50%
+}
+.nomePost{
+    grid-area: nomePost;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    padding-left: 5px;
+    font-size: 13px;
+    font-weight: bold;
+}
+.tempoPost{
+    font-weight: normal;
+}
+.opcoesPost{
+    grid-area: opcoesPost;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.imgPost{
+    width: 100%;
+    height: 590px;
+}
+.imgPost img{
+    width: 100%;
+    height: 100%;
+    border-radius: 7px
+}
+.interacoesPost{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 14px;
+}
+.interacao1{
+    display: flex;
+    gap: 20px;
+}
+.curtidasPost{
+    font-size: 13px;
+    padding-top: 8px;
+    font-weight: bold;
+}
+.informacaoPost{
+    height: 100%;
+    padding-top: 15px;
+    gap: 5px;
+    font-size: 13px;
+}
+.nomeDescPost{
+    font-weight: bold;
+}
+.descricaoPost{
+    margin-bottom: 15px;
+}
+.baixo{
+    display: none;
+}
+@media screen and (max-width: 1096px) {
+    .linkEsq p{
+        display: none;
+    }
+    .container{
+        grid-template-columns: 75px 1fr;
+    }
+    
+    .logo{
+        display: none;
+    }
+    .linksEsquerdo .linkInstagram{
+        display: block;
+        margin-top: 30px;
+    }
+    .home{
+        margin-top: 43px;
+    }
+    .content{
+        grid-template-columns: 1fr 0px;
+    }
+    .direito{
+        display: none;
+    }
+    header{
+        margin: auto;
+        width: 600px;
+    }
+}
+
+
+@media screen and (max-width: 767px) {
+    body{
+        max-width: 700px;
+        overflow-x: hidden;
+    }
+    .container {
+        grid-template-areas: 
+        'cima'
+        'main'
+        'baixo';
+        grid-template-rows: 60px 1fr 0px; /* 0px para .baixo, pois é fixo */
+        grid-template-columns: 1fr;
+        
+    }
+    .content{
+        padding-top: 20px;
+        grid-template-rows: 120px 1fr;
+    }
+    .main {
+        padding-bottom: 48px;
+         max-width: 700px;
+    }
+    .cima{
+        grid-area: cima;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+         max-width: 700px;
+    }
+    header{
+        max-width: 700px;
+        gap: 10px;
+    }
+    header:hover::-webkit-scrollbar-thumb {
+        background-color: transparent;
+    }
+    .imageCimaContainer{
+        width: auto;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        padding-left: 30px;
+        gap: 7px;
+    }
+    .imageCimaContainer img{
+        width: 103px;
+    }
+    .menuCima{
+        display: flex;
+        align-items: center;
+        height: 100%;
+        width: auto;
+        gap: 30px;
+        padding-right: 15px;
+    }
+    .barraPesquisa{
+        max-width: 110px;
+        height: 36px;
+        background-color: #efefef;
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+    .textoPesquisa{
+        background-color: transparent;
+        border-color: transparent;
+        outline: none;
+        width: 80%;
+    }
+    section{
+        padding-bottom: 100px;
+        padding-top: 20px;
+    }
+    .storie{
+        width: 90px;
+        height: 100%;
+    }
+    .imageStorieBackground{
+        width: 100%;
+        height: 100%;
+    }
+     .imageStorieBackground img{
+        width: 100%;
+        height: 100%;
+    }
+    .superiorPost, .interacoesPost, .curtidasPost, .informacaoPost{
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+        
+   .baixo {
+        grid-area: baixo;
+        position: fixed;
+        bottom: 0;
+        background-color: white;
+        display: flex;
+        justify-content: space-evenly;
+        width: 100%;
+    }
+    .dropdown button{
+        width: auto;
+        display: flex;
+        align-items: center;
+        background-color: transparent;
+        border-color: transparent;
+    }
+    .dropdown button:hover{
+        background-color: transparent;
+        border-color: transparent;
+    }
+    .dropdown button:focus{
+        background-color: transparent;
+        border-color: transparent;
+    }
+
+    .dropdown button img{
+        width: 103px;
+    }
+    header{
+        width: 100%;
+    }
+    .baixo{
+        grid-area: baixo;
+        position: fixed;
+        bottom: 0;
+        background-color: white;
+         max-width: 700px;
+    }
+    .esquerdo{
+        display: none
+    }
+    .post{
+        max-width: 100vw;
+        padding-bottom: 10px;
+        margin-bottom: 10px;
+    }
+    .baixo{
+        display: flex;
+        justify-content: space-evenly;
+        width: 100%;
+    }
+    .baixo img{
+        width: 24px;
+        height: 24px;
+        border-radius: 50%;
+    }
+    .linkBaixo{
+        width: 48px;
+        height: 48px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
