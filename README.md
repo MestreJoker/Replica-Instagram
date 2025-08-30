@@ -7,8 +7,12 @@ AVISO: Esta página é um projeto educacional pessoal, criado exclusivamente par
 Esse é um site feito por mim, Gabriel, para fins de estudo e também para demonstrar meus conhecimentos nas técnologias HTML e CSS. Para isso, eu fiz uma réplica, o mais fiel possível, do site do Instagram
 
 Desktop:
+<br>
 <img width="1234" height="615" alt="image" src="https://github.com/user-attachments/assets/a519acc2-4cfd-4051-9ea2-a030bad1978f" />
 
 Mobile:
+<br>
+<center>
 <img width="375" height="665" alt="image" src="https://github.com/user-attachments/assets/3f3cde71-116c-45be-acb6-9682355ec05a" />
+</center>
 
