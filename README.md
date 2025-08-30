@@ -10,8 +10,8 @@ Desktop:
 <br>
 <img width="1234" height="615" alt="image" src="https://github.com/user-attachments/assets/a519acc2-4cfd-4051-9ea2-a030bad1978f" />
 
-Mobile:
-<br>
+<p>Mobile:</p>
+<br><br>
 <center>
 <img width="375" height="665" alt="image" src="https://github.com/user-attachments/assets/3f3cde71-116c-45be-acb6-9682355ec05a" />
 </center>
